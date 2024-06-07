@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+body{
+    background-color: #032539;
+    margin: 0;
+    z-index: 100;
+}
+/* navbar */
+.menus{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: none;
+    background-color: #bfdaf2;
+    margin-top: 12px;
+    margin-left: 12px;
+
+  }
+  
+  .menus:hover {
+    background-color: #83a6cc;
+  }
+
+  .menus:active{
+    background-color: #83a6cc;
+  }
+
+  .navbar{
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    background-color: #3667a8;
+    height: 80px;
+    width: fit-content(stretch);
+    margin-top: 0%;
+    z-index: 1000;
+  }
+
+
+  /*content*/
+  .content{
+    justify-content: center;
+  }
+
+  h1{
+    display: flex;
+    justify-content: center;
+    color:#83a6cc;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  h2{
+    justify-content: center;
+    text-align: center;
+    color:#bfdaf2;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding: 30px;
+    margin-top: -30px;
+  }

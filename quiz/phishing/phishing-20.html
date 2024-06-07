@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="quiz-container">
+        <div id="quiz">
+            <div class="quiz-header">
+                <h2 id="question">Question Text</h2>
+                <ul>
+                    <li>
+                        <input type="radio" id="a" name="answer" class="answer">
+                        <label for="a" id="a_text">Answer</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="b" name="answer" class="answer">
+                        <label for="b" id="b_text">Answer</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="c" name="answer" class="answer">
+                        <label for="c" id="c_text">Answer</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="d" name="answer" class="answer">
+                        <label for="d" id="d_text">Answer</label>
+                    </li>
+                </ul>
+            </div>
+            <button class="button" id="submit">
+                Submit →
+              </button>
+        </div>
+    </div>
+    <script>   const quizData = [
+        {
+            question: "What is phishing?",
+            a: "A technique to encrypt data",
+            b: "A type of malware",
+            c: "A social engineering attack",
+            d: "A method to bypass firewalls",
+            correct: "c"
+        },
+        {
+            question: "Which of the following is a common method used in phishing attacks?",
+            a: "Sending malicious email attachments",
+            b: "Conducting DDoS attacks",
+            c: "Exploiting software vulnerabilities",
+            d: "Scanning network traffic",
+            correct: "a"
+        },
+        {
+            question: "What is the primary goal of a phishing attack?",
+            a: "To encrypt files and demand payment",
+            b: "To spread malware across networks",
+            c: "To steal sensitive information",
+            d: "To disrupt internet connectivity",
+            correct: "c"
+        },
+        {
+            question: "What is the term used for phishing attacks that target a specific individual or organization?",
+            a: "Generic phishing",
+            b: "Spear phishing",
+            c: "Mass phishing",
+            d: "Wide net phishing",
+            correct: "b"
+        },
+        {
+            question: "How do phishing emails often attempt to deceive recipients?",
+            a: "By using threatening language",
+            b: "By promising financial rewards",
+            c: "By impersonating trusted entities",
+            d: "By sending emails from official government accounts",
+            correct: "c"
+        },
+        {
+            question: "What is the purpose of a phishing website?",
+            a: "To provide free services to users",
+            b: "To conduct financial transactions securely",
+            c: "To collect sensitive information from visitors",
+            d: "To block access to malicious websites",
+            correct: "c"
+        },
+        {
+            question: "What is the best way to verify the authenticity of an email before clicking on any links or providing personal information?",
+            a: "Contact the sender directly using a known contact method",
+            b: "Click on the links and verify the website's URL",
+            c: "Open attachments to confirm their content",
+            d: "Reply to the email with personal information",
+            correct: "a"
+        },
+        {
+            question: "What is a common technique used to create a sense of urgency in phishing emails?",
+            a: "Offering discounts or promotions",
+            b: "Threatening legal action or account suspension",
+            c: "Providing vague or misleading information",
+            d: "Requesting feedback on a recent purchase",
+            correct: "b"
+        },
+        {
+            question: "What is the main risk associated with falling victim to a phishing attack?",
+            a: "Identity theft",
+            b: "Computer overheating",
+            c: "Increased internet speed",
+            d: "Enhanced network security",
+            correct: "a"
+        },
+        {
+            question: "How can individuals protect themselves from phishing attacks?",
+            a: "Only open emails from known contacts",
+            b: "Ignore security warnings from email providers",
+            c: "Click on all links in emails to confirm their validity",
+            d: "Regularly update passwords and be cautious of unsolicited emails",
+            correct: "d"
+        },
+        {
+                question: "What is CEO fraud, also known as whaling?",
+                a: "A phishing attack targeting high-profile individuals",
+                b: "A type of malware designed to steal financial data",
+                c: "A tactic to bypass firewalls and gain unauthorized access",
+                d: "A technique to encrypt sensitive files on a victim's device",
+                correct: "a"
+            },
+            {
+                question: "What is the term used for phishing attacks that target a large number of individuals indiscriminately?",
+                a: "Spear phishing",
+                b: "Whaling",
+                c: "Pharming",
+                d: "Mass phishing",
+                correct: "d"
+            },
+            {
+                question: "What is pretexting in the context of phishing?",
+                a: "Creating fake websites to trick users into providing personal information",
+                b: "Pretending to be someone else to obtain sensitive information",
+                c: "Installing malicious software on a victim's device",
+                d: "Using encryption to hide the content of phishing emails",
+                correct: "b"
+            },
+            {
+                question: "What is a common characteristic of phishing emails?",
+                a: "They often contain numerous spelling and grammar mistakes",
+                b: "They are always sent from official government accounts",
+                c: "They provide detailed information about the sender's identity",
+                d: "They include legitimate contact information for verification",
+                correct: "a"
+            },
+            {
+                question: "What is the purpose of a phishing simulation exercise?",
+                a: "To launch real phishing attacks against an organization",
+                b: "To educate employees about the dangers of phishing",
+                c: "To block access to phishing websites",
+                d: "To enhance network security through encryption",
+                correct: "b"
+            },
+            {
+                question: "What is a common tactic used by phishers to make their emails appear legitimate?",
+                a: "Using generic greetings like 'Dear User'",
+                b: "Including attachments with suspicious file extensions",
+                c: "Spoofing email addresses of trusted entities",
+                d: "Sending emails with no clear call to action",
+                correct: "c"
+            },
+            {
+                question: "What is the purpose of email filtering in phishing prevention?",
+                a: "To block all incoming emails",
+                b: "To automatically delete all email attachments",
+                c: "To detect and remove phishing emails from the inbox",
+                d: "To encrypt email content to prevent unauthorized access",
+                correct: "c"
+            },
+            {
+                question: "What is a common technique used by phishers to evade email filters?",
+                a: "Including suspicious file attachments",
+                b: "Using URL shorteners",
+                c: "Using descriptive subject lines",
+                d: "Using proper grammar and spelling",
+                correct: "b"
+            },
+            {
+                question: "What should individuals do if they suspect they have fallen victim to a phishing attack?",
+                a: "Ignore the situation and continue using their accounts",
+                b: "Report the incident to the appropriate authorities",
+                c: "Share their login credentials with others for verification",
+                d: "Click on any links provided in the suspicious email",
+                correct: "b"
+            },
+            {
+                question: "What is the importance of ongoing phishing awareness training?",
+                a: "To decrease internet speed",
+                b: "To ensure employees remain vigilant against evolving threats",
+                c: "To encourage employees to share their passwords with colleagues",
+                d: "To block access to phishing websites",
+                correct: "b"
+            }
+    ];
+    
+    const quiz = document.getElementById("quiz");
+    const answerEls = document.querySelectorAll(".answer");
+    const questionEl = document.getElementById("question");
+    const a_text = document.getElementById("a_text");
+    const b_text = document.getElementById("b_text");
+    const c_text = document.getElementById("c_text");
+    const d_text = document.getElementById("d_text");
+    const submitBtn = document.getElementById("submit");
+    
+    let currentQuiz = 0;
+    let score = 0;
+    let incorrectAnswers = [];
+    
+    loadQuiz();
+    
+    function loadQuiz() {
+        deselectAnswers();
+        const currentQuizData = quizData[currentQuiz];
+        questionEl.innerText = currentQuizData.question;
+        a_text.innerText = currentQuizData.a;
+        b_text.innerText = currentQuizData.b;
+        c_text.innerText = currentQuizData.c;
+        d_text.innerText = currentQuizData.d;
+    }
+    
+    function deselectAnswers() {
+        answerEls.forEach(answerEl => answerEl.checked = false);
+    }
+    
+    function getSelected() {
+        let answer;
+        answerEls.forEach(answerEl => {
+            if (answerEl.checked) {
+                answer = answerEl.id;
+            }
+        });
+        return answer;
+    }
+    
+    submitBtn.addEventListener("click", () => {
+        const answer = getSelected();
+        if (answer) {
+            if (answer === quizData[currentQuiz].correct) {
+                score++;
+            } else {
+                incorrectAnswers.push({
+                    question: quizData[currentQuiz].question,
+                    incorrectAnswer: quizData[currentQuiz][answer],
+                    correctAnswer: quizData[currentQuiz][quizData[currentQuiz].correct]
+                });
+            }
+            currentQuiz++;
+            if (currentQuiz < quizData.length) {
+                loadQuiz();
+            } else {
+                displayResults();
+            }
+        }
+    });
+    
+    function displayResults() {
+        let resultHTML;
+        if (score === quizData.length) {
+            resultHTML = `<h2>Well done! You answered all questions correctly!</h2>`;
+        } else {
+            resultHTML = `<h2>You answered ${score}/${quizData.length} questions correctly.</h2>`;
+            if (incorrectAnswers.length > 0) {
+                resultHTML += '<h3>Correct and Incorrect Answers for Incorrect Questions:</h3><ul>';
+                incorrectAnswers.forEach(incorrectAnswer => {
+                    resultHTML += `<li>${incorrectAnswer.question}<br>
+                                   Your Answer: ${incorrectAnswer.incorrectAnswer}<br>
+                                   Correct Answer: ${incorrectAnswer.correctAnswer}</li>`;
+                });
+                resultHTML += '</ul>';
+            }
+        }
+        resultHTML += '<button onclick="location.reload()">Try Again</button>';
+        quiz.innerHTML = resultHTML;
+    }
+    
+    </script>
+</body>
+</html>

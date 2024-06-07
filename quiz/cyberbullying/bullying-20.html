@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="quiz-container">
+        <div id="quiz">
+            <div class="quiz-header">
+                <h2 id="question">Question Text</h2>
+                <ul>
+                    <li>
+                        <input type="radio" id="a" name="answer" class="answer">
+                        <label for="a" id="a_text">Answer</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="b" name="answer" class="answer">
+                        <label for="b" id="b_text">Answer</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="c" name="answer" class="answer">
+                        <label for="c" id="c_text">Answer</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="d" name="answer" class="answer">
+                        <label for="d" id="d_text">Answer</label>
+                    </li>
+                </ul>
+            </div>
+            <button class="button" id="submit">
+                Submit →
+              </button>
+        </div>
+    </div>
+<script>
+        const quizData = [
+        {
+        question: "What is cyberbullying?",
+        a: "A form of physical violence",
+        b: "A type of hacking",
+        c: "Bullying that takes place online or through digital devices",
+        d: "An educational program",
+        correct: "c"
+    },
+    {
+        question: "Which of the following is an example of cyberbullying?",
+        a: "Sending a mean text message to a friend",
+        b: "Disagreeing with someone's opinion online",
+        c: "Ignoring a friend's text message",
+        d: "Helping a classmate with homework",
+        correct: "a"
+    },
+    {
+        question: "What is the impact of cyberbullying on victims?",
+        a: "Increased self-esteem",
+        b: "Positive mental health",
+        c: "Emotional distress and anxiety",
+        d: "Improved social skills",
+        correct: "c"
+    },
+    {
+        question: "Who can be affected by cyberbullying?",
+        a: "Only children",
+        b: "Only adults",
+        c: "Both children and adults",
+        d: "Nobody",
+        correct: "c"
+    },
+    {
+        question: "What is one way to prevent cyberbullying?",
+        a: "Ignoring the problem",
+        b: "Sharing personal information online",
+        c: "Being kind and respectful online",
+        d: "Spreading rumors about others",
+        correct: "c"
+    },
+    {
+        question: "What should you do if you witness cyberbullying?",
+        a: "Join in and support the bully",
+        b: "Stay silent and ignore it",
+        c: "Report it to a trusted adult or authority",
+        d: "Encourage the victim to retaliate",
+        correct: "c"
+    },
+    {
+        question: "What is the role of bystanders in cyberbullying?",
+        a: "To encourage the bully",
+        b: "To ignore the situation",
+        c: "To intervene and support the victim",
+        d: "To join in the bullying behavior",
+        correct: "c"
+    },
+    {
+        question: "Which of the following behaviors is NOT considered cyberbullying?",
+        a: "Sending mean messages or threats",
+        b: "Sharing someone's private information without permission",
+        c: "Complimenting a friend's photo",
+        d: "Creating fake social media accounts to harass others",
+        correct: "c"
+    },
+    {
+        question: "How can victims of cyberbullying seek help?",
+        a: "By retaliating and engaging in similar behavior",
+        b: "By reaching out to a trusted adult, friend, or helpline",
+        c: "By keeping the abuse a secret",
+        d: "By deleting their social media accounts",
+        correct: "b"
+    },
+    {
+        question: "What is the legal consequence of cyberbullying in many jurisdictions?",
+        a: "There are no legal consequences",
+        b: "Community service",
+        c: "Fines or criminal charges",
+        d: "Apology letter",
+        correct: "c"
+    },
+    {
+        question: "What is the purpose of cyberbullying awareness campaigns?",
+        a: "To encourage cyberbullying behavior",
+        b: "To increase understanding of the issue and promote prevention",
+        c: "To promote online anonymity",
+        d: "To blame victims for their own harassment",
+        correct: "b"
+    },
+    {
+        question: "Which of the following is NOT a common platform for cyberbullying?",
+        a: "Social media",
+        b: "Online gaming",
+        c: "Educational websites",
+        d: "Messaging apps",
+        correct: "c"
+    },
+    {
+        question: "What is the effect of cyberbullying on mental health?",
+        a: "Improved self-confidence",
+        b: "Decreased anxiety and depression",
+        c: "Increased risk of depression, anxiety, and suicidal thoughts",
+        d: "Better interpersonal relationships",
+        correct: "c"
+    },
+    {
+        question: "How can parents and guardians help prevent cyberbullying?",
+        a: "By encouraging their children to retaliate",
+        b: "By ignoring their children's online activities",
+        c: "By monitoring their children's online behavior and having open conversations about cyberbullying",
+        d: "By blaming their children for being targeted",
+        correct: "c"
+    },
+    {
+        question: "What is the importance of digital citizenship education in preventing cyberbullying?",
+        a: "It promotes cyberbullying behavior",
+        b: "It teaches children how to be responsible, respectful, and safe online",
+        c: "It encourages anonymity online",
+        d: "It blames victims for their own harassment",
+        correct: "b"
+    },
+    {
+        question: "What is one consequence of cyberbullying for the perpetrator?",
+        a: "No consequences",
+        b: "Legal repercussions",
+        c: "Increased popularity",
+        d: "Financial rewards",
+        correct: "b"
+    },
+    {
+        question: "What is the role of schools in addressing cyberbullying?",
+        a: "To ignore cyberbullying incidents",
+        b: "To punish victims",
+        c: "To educate students about cyberbullying and implement prevention strategies",
+        d: "To blame victims for being targeted",
+        correct: "c"
+    },
+    {
+        question: "What should you do if you are being cyberbullied?",
+        a: "Retaliate with similar behavior",
+        b: "Keep the abuse a secret",
+        c: "Reach out for help and support from trusted adults or helplines",
+        d: "Blame yourself for the bullying",
+        correct: "c"
+    },
+    {
+        question: "What is the difference between cyberbullying and traditional bullying?",
+        a: "There is no difference",
+        b: "Cyberbullying takes place online or through digital devices, while traditional bullying occurs face-to-face",
+        c: "Traditional bullying is more harmful than cyberbullying",
+        d: "Cyberbullying is only directed at adults",
+        correct: "b"
+    },
+    {
+        question: "What is one way to create a positive online environment and prevent cyberbullying?",
+        a: "Spread rumors and gossip online",
+        b: "Be respectful, kind, and considerate towards others",
+        c: "Ignore cyberbullying incidents",
+        d: "Join in and support cyberbullying behavior",
+        correct: "b"
+    }
+        ];
+    
+    const quiz = document.getElementById("quiz");
+    const answerEls = document.querySelectorAll(".answer");
+    const questionEl = document.getElementById("question");
+    const a_text = document.getElementById("a_text");
+    const b_text = document.getElementById("b_text");
+    const c_text = document.getElementById("c_text");
+    const d_text = document.getElementById("d_text");
+    const submitBtn = document.getElementById("submit");
+    
+    let currentQuiz = 0;
+    let score = 0;
+    let incorrectAnswers = [];
+    
+    loadQuiz();
+    
+    function loadQuiz() {
+        deselectAnswers();
+        const currentQuizData = quizData[currentQuiz];
+        questionEl.innerText = currentQuizData.question;
+        a_text.innerText = currentQuizData.a;
+        b_text.innerText = currentQuizData.b;
+        c_text.innerText = currentQuizData.c;
+        d_text.innerText = currentQuizData.d;
+    }
+    
+    function deselectAnswers() {
+        answerEls.forEach(answerEl => answerEl.checked = false);
+    }
+    
+    function getSelected() {
+        let answer;
+        answerEls.forEach(answerEl => {
+            if (answerEl.checked) {
+                answer = answerEl.id;
+            }
+        });
+        return answer;
+    }
+    
+    submitBtn.addEventListener("click", () => {
+        const answer = getSelected();
+        if (answer) {
+            if (answer === quizData[currentQuiz].correct) {
+                score++;
+            } else {
+                incorrectAnswers.push({
+                    question: quizData[currentQuiz].question,
+                    incorrectAnswer: quizData[currentQuiz][answer],
+                    correctAnswer: quizData[currentQuiz][quizData[currentQuiz].correct]
+                });
+            }
+            currentQuiz++;
+            if (currentQuiz < quizData.length) {
+                loadQuiz();
+            } else {
+                displayResults();
+            }
+        }
+    });
+    
+    function displayResults() {
+        let resultHTML;
+        if (score === quizData.length) {
+            resultHTML = `<h2>Well done! You answered all questions correctly!</h2>`;
+        } else {
+            resultHTML = `<h2>You answered ${score}/${quizData.length} questions correctly.</h2>`;
+            if (incorrectAnswers.length > 0) {
+                resultHTML += '<h3>Correct and Incorrect Answers for Incorrect Questions:</h3><ul>';
+                incorrectAnswers.forEach(incorrectAnswer => {
+                    resultHTML += `<li>${incorrectAnswer.question}<br>
+                                   Your Answer: ${incorrectAnswer.incorrectAnswer}<br>
+                                   Correct Answer: ${incorrectAnswer.correctAnswer}</li>`;
+                });
+                resultHTML += '</ul>';
+            }
+        }
+        resultHTML += '<button onclick="location.reload()">Try Again</button>';
+        quiz.innerHTML = resultHTML;
+    }
+    
+    </script>
+</body>
+</html>

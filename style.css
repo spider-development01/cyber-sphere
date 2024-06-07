@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    margin: 0;
+    background: rgb(27,48,82);
+background: radial-gradient(circle, rgba(27,48,82,1) 0%, rgba(4,23,56,1) 30%, rgba(0,11,30,1) 56%, rgba(5,33,78,1) 100%);
+    color: #eee;
+    font-family: Poppins;
+    font-size: 12px;
+}
+a{
+    text-decoration: none;
+}
+ 
+html, body {
+  max-width: 100%;
+overflow-x: clip;
+}
+
+header {
+  color: #eee;
+  font-family: Poppins;
+  font-size: 12px;
+  width: 100%;
+max-width: auto;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  top: 1em;
+  z-index: 10000;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: rgb(51,48,160);
+  background: linear-gradient(90deg, rgba(51,48,160,1) 0%, rgba(34,82,132,1) 50%, rgba(6,1,75,1) 100%);
+  margin: 30px;
+  height: 80px;
+  border-radius:50px ;
+}
+
+
+/* carousel */
+.carousel{
+    height: 100vh;
+    margin-top: -50px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.carousel .list .item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+.carousel .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel .list .item .content{
+    position: absolute;
+    top: 30%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+.carousel .list .item .author{
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+.carousel .list .item .title,
+.carousel .list .item .topic{
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+.carousel .list .item .topic{
+    color: #f1683a;
+}
+.carousel .list .item .buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+.carousel .list .item .buttons button{
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;
+}
+.carousel .list .item .buttons button:nth-child(2){
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+/* thumbail */
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+.thumbnail .item{
+    width: 150px;
+    height: 200px;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+    position: relative;
+}
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.thumbnail .item .content{
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+.thumbnail .item .content .title{
+    font-weight: 500;
+}
+.thumbnail .item .content .description{
+    font-weight: 300;
+}
+/* arrows */
+.arrows{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.arrows button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+}
+.arrows button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+/* animation */
+.carousel .list .item:nth-child(1){
+    z-index: 1;
+}
+
+/* animation text in first item */
+
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons
+{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+@keyframes showContent{
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+.carousel .list .item:nth-child(1) .content .title{
+    animation-delay: 1.2s!important;
+}
+.carousel .list .item:nth-child(1) .content .topic{
+    animation-delay: 1.4s!important;
+}
+.carousel .list .item:nth-child(1) .content .des{
+    animation-delay: 1.6s!important;
+}
+.carousel .list .item:nth-child(1) .content .buttons{
+    animation-delay: 1.8s!important;
+}
+/* create animation when next click */
+.carousel.next .list .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards;
+}
+@keyframes showImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1){
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.prev .list .item img{
+    z-index: 100;
+}
+@keyframes showThumbnail{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+.carousel.next .thumbnail{
+    animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+    from{
+        transform: translateX(150px);
+    }
+}
+
+/* running time */
+.carousel.next .time,
+.carousel.prev .time{
+    animation: runningTime 3s linear 1 forwards;
+}
+@keyframes runningTime{
+    from{ width: 100%}
+    to{width: 0}
+}
+
+
+/* prev click */
+
+.carousel.prev .list .item:nth-child(2){
+    z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img{
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1){
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.next .arrows button,
+.carousel.prev .arrows button{
+    pointer-events: none;
+}
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .buttons
+{
+    animation: contentOut 1.5s linear 1 forwards!important;
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 678px) {
+    .carousel .list .item .content{
+        padding-right: 0;
+    }
+    .carousel .list .item .content .title{
+        font-size: 30px;
+    }
+}
+
+button{
+    cursor: pointer;
+}
+
+
+/* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+  }
+  
+
+/*content*/
+  .content{
+    justify-content: center;
+  }
+
+  h1{
+    display: flex;
+    justify-content: center;
+    color:#83a6cc;
+    font-family: Google Sans Display, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  h2{
+    justify-content: center;
+    text-align: center;
+    color:#bfdaf2;
+    font-family: Google Sans Display, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+    font-weight: 500;
+    font-style: normal;
+    padding: 30px;
+    margin-top: -30px;
+  }
+
+
+/* Responsive styles for smaller screens */
+
+
+  .blog{
+    border: 2px solid #3667a8;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+  }
+
+  p{
+    color: #bfdaf2;
+    font-family: Google Sans Display, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  .introduction{
+    text-align: center;
+  }
+
+
+
+  .conclusion{
+    text-align: center;
+  }
+
+
+  .tips{
+    color: #bfdaf2;
+  }
+/*footer*/
+  .links{
+    color: #bfdaf2;
+    background-color: #3667a8;
+    border-radius: 18px;
+    text-align: center;
+    height: fit-content;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    margin: 20px;
+    margin-top: 10px;
+  }
+
+  .footer{
+    border: 2px solid #3667a8;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+  }
+
+
+.cards{
+border: 2px solid #3667a8;
+    border-radius: 20px;
+ padding: 20px;
+  margin: 20px;
+ }
+
+ .learn {
+  color: #bfdaf2;
+  background-color: #3667a8;
+  border-radius: 18px;
+  text-align: center;
+  height: fit-content;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-style: italic;
+  margin: 20px;
+}
+
+.learner{
+  color: #bfdaf2;
+}
+
+.learner:hover{
+  color: #032539;
+
+}
+
+
+
+.info{
+  margin-top: 8px;
+}
+
+.head{
+  margin-top: 0%;
+  margin-bottom: 7px;
+}
+
+.heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.corner{
+  background-color: #bfdaf2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+
+  margin: 20px;
+}
+
+h4{
+  display: flex;
+  justify-content: center;
+  color: #000;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 30px;
+}
+
+
+.introduction{
+  text-align: center;
+}
+
+ol{
+  color: #bfdaf2;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+}
+
+li{
+  margin: 20px;
+}
+
+.bullying{
+  border: 2px solid #3667a8;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.web{
+  color: #83a6cc;
+}
+
+.botn {
+  cursor: pointer;
+  font-weight: 700;
+  font-family: Helvetica,"sans-serif";
+  transition: all .2s;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: #bfdaf2;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  margin: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+.botn:hover {
+  background: #83a6cc;
+}
+
+.botn > svg {
+  width: 34px;
+  margin-left: 10px;
+  transition: transform .3s ease-in-out;
+}
+
+.botn:hover svg {
+  transform: translateX(5px);
+}
+
+.botn:active {
+  transform: scale(0.95);
+}
+
+.useful-links{
+  display: flex;
+  justify-content: center;
+  border: 2px solid #3667a8;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px;
+}
+
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 1140px) {
+    .useful-links{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+
+
+  .menus{
+    box-sizing: border-box;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    border: none;
+    background: rgb(191,219,242);
+    background: linear-gradient(0deg, rgba(191,219,242,1) 0%, rgba(17,59,153,1) 100%);
+    border: 2px #83a6cc;
+    margin-left: 12px;
+  }
+
+  .end{
+    margin-right: 12px;
+    box-sizing: border-box;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    border: none;
+    background: rgb(191,219,242);
+    background: linear-gradient(0deg, rgba(191,219,242,1) 0%, rgba(17,59,153,1) 100%);
+    border: 2px #83a6cc;
+    margin-left: 12px;
+  }
+
+   /* fly-in animation  */
+ .fly-in-right {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.fly-in-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+  /*  fly-in animation */
+  .fly-in-left {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+
+  .fly-in-left.show {
+    opacity: 1;
+    transform: translateX(0);
+  }

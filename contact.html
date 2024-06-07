@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/custom-scrollbar.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GHGPVBPL9L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GHGPVBPL9L');
+</script>
+    <title>Contact-Form</title>
+</head>
+<body>
+      <!--top navbar-->
+      <div class="nav">
+        <header>
+            <nav>
+                <a href="index.html"> <button class="menus">
+                    <img src="svg/home logo.svg" alt="home" class="buttoo">
+                              </button></a>
+                        <a href="privacy-tips.html"> <button class=" menus">
+                                <img src="svg/tips logo.svg" alt="#" class="buttoo">
+                              </button></a>
+                              <a href="contact.html">  <button class=" menus">
+                                <img src="svg/contact logo.svg" alt="#" class="buttoo">
+                              </button></a>
+                              <a href="download.html">  <button class=" menus">
+                                <img src="svg/download logo.svg" alt="#" class="buttoo">
+                              </button></a>
+                              <a href="quiz.html">  <button class="end">
+                                <img src="svg/quiz.svg" alt="#" class="buttoo">
+                              </button></a>
+            </nav>
+        </header>
+      </div>
+   <div class="contact-container ">
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+<div class="contact-left-title fly-in-right">
+    <h2>Contact Us</h2>
+    <hr>
+</div>
+<input type="hidden" name="access_key" value="bda048fc-71a5-4d57-a377-f7e56f86e860">
+<input type="text" name="name" placeholder="Your Name" class="contact-inputs fly-in-left" required>
+<input type="email" name="email" placeholder="Your Email" class="contact-inputs fly-in-right" required>
+<textarea name="message" placeholder="Your Message" class="contact-inputs fly-in-left"></textarea>   
+<a href="youtube.com" class="fly-in-right"><button type="submit">Submit<img src="svg/forward.svg"></button></a>
+</form>
+   </div> 
+  <!-- Chatbot script -->
+  <script>
+    window.embeddedChatbotConfig = {
+    chatbotId: "SqmPqz9e0u2OzV1g_RF85",
+    domain: "www.chatbase.co"
+    }
+    </script>
+    <script
+    src="https://www.chatbase.co/embed.min.js"
+    chatbotId="SqmPqz9e0u2OzV1g_RF85"
+    domain="www.chatbase.co"
+    defer>
+    </script>
+    <!--footer-->
+<div class="footer fly-in-left">
+  <div class="links">
+    To download the tips and instructions about how to be safe from hackers click on this <a href="download.html"><img src="svg/download logo.svg"></a>icon at the top.
+    </div>
+    <div class="links">
+        Copyright &copy;<script>document.write(new Date().getFullYear());</script> Spider Development
+    </div>
+</div>
+  </div>
+    <!-- JavaScript for triggering fly-in animations -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const elementsToAnimate = document.querySelectorAll('.fly-in-right');
+
+    function checkScroll() {
+      const triggerBottom = window.innerHeight * 0.8;
+      elementsToAnimate.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        if (elementTop < triggerBottom) {
+          element.classList.add('show');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkScroll);
+    checkScroll(); // Trigger check on page load
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const elementsToAnimate = document.querySelectorAll('.fly-in-left');
+
+    function checkScroll() {
+      const triggerBottom = window.innerHeight * 0.8;
+      elementsToAnimate.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        if (elementTop < triggerBottom) {
+          element.classList.add('show');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkScroll);
+    checkScroll(); // Trigger check on page load
+  });
+</script>
+</body>
+</html>

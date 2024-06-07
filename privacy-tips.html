@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/custom-scrollbar.css">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        .flex-container {
+          display: flex;
+          flex-wrap: wrap;
+          font-size: 30px;
+          text-align: center;
+        }
+        
+        .flex-item-left {
+          padding: 10px;
+          flex: 50%;
+          
+        }
+
+        .flex-item-left h1{
+            margin-top: 200px;
+            font-family: Poppins;
+        }
+        
+        .flex-item-right {
+          padding: 10px;
+          flex: 50%;
+          margin-top: 30px;
+        }
+        
+        /* Responsive layout - makes a one column-layout instead of a two-column layout */
+        @media (max-width: 800px) {
+          .flex-item-right, .flex-item-left {
+            flex: 100%;
+          }
+
+          .flex-item-right{
+            margin-top: -180px;
+          }
+        }
+
+        
+                /* Responsive layout - makes a one column-layout instead of a two-column layout */
+                @media (max-width: 520px) {
+
+                .hero{
+                    width: 450px;
+                    height: 450px;
+                }                
+        }
+
+        @media (max-width: 470px) {
+
+.hero{
+    width: 350px;
+    height: 350px;
+}                
+        }
+        </style>
+</head>
+<body>
+  <div class="nav">
+    <header>
+        <nav>
+            <a href="index.html"> <button class="menus">
+                <img src="svg/home logo.svg" alt="home" class="buttoo">
+                          </button></a>
+                    <a href="privacy-tips.html"> <button class=" menus">
+                            <img src="svg/tips logo.svg" alt="#" class="buttoo">
+                          </button></a>
+                          <a href="contact.html">  <button class=" menus">
+                            <img src="svg/contact logo.svg" alt="#" class="buttoo">
+                          </button></a>
+                          <a href="download.html">  <button class=" menus">
+                            <img src="svg/download logo.svg" alt="#" class="buttoo">
+                          </button></a>
+                          <a href="quiz.html">  <button class="end">
+                            <img src="svg/quiz.svg" alt="#" class="buttoo">
+                          </button></a>
+        </nav>
+    </header>
+  </div>
+    <div class="flex-container">
+        <div class="flex-item-left fly-in-left">    
+            <style>
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+                background-color: #0c1a3a;
+                color: white;
+            }
+    
+    
+            .main-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: calc(100vh - 60px);
+            }
+    
+            .welcome-section {
+                display: flex;
+                align-items: center;
+                gap: 50px;
+            }
+    
+            .welcome-text .h1 {
+                font-size: 70px;
+                margin: 10px 0;
+            }
+    
+            .buttons {
+                margin-top: 20px;
+                margin-right: 300px;
+                display: flex;
+                flex-direction: row;
+            }
+    
+@media screen and (max-width: 620px) {
+    .welcome-text .h1 {
+    font-size: 50px;
+    margin-right: 150px;
+  }
+}
+@media screen and (max-width: 596px) {
+    .welcome-text .h1 {
+    margin-right: 135px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+    .welcome-text .h1 {
+    font-size: 40px;
+    margin-right: 223px;
+  }
+}
+            .btn {
+                display: inline-block;
+                padding: 10px 20px;
+                margin-right: 10px;
+                background-color: #ffffff;
+                color: rgb(0, 0, 0);
+                text-decoration: none;
+                font-family: Poppins;
+                font-size: 16px;
+            }
+    
+            .btn-secondary {
+                background-color: transparent;
+                border: 2px solid #ffffff;
+                color: #ffffff;
+            }
+    
+            .welcome-image img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            h3{
+                font-weight: bold;
+    letter-spacing: 10px;
+    margin-bottom: -20px;
+    font-size: 40px;
+    margin-right: 400px;
+   
+            }
+        </style>
+    </head>
+    <body>
+        <main class="main-content">
+            <section class="welcome-section">
+                <div class="welcome-text">
+                    <div class="text">
+                    <h3>About</h3>
+                    <h1 class="h1">CYBER-SECURITY</h1>
+                </div>
+                    <div class="buttons">
+                        <a href="#learn-more" class="btn">Learn More</a>
+                        <a href="#contact-us" class="btn btn-secondary">Contact Us</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+</div>
+        <div class="flex-item-right fly-in-right"><img src="svg/hero.svg" alt="" srcset="" class="hero"></div>
+      </div>
+    
+  <!--lower content-->
+  <div class="blog fly-in-right">
+    <h1>What is Cyber Security?</h1>
+    <p class="conclusion">
+      To address these challenges, cybersecurity professionals employ a variety of techniques and tools, including encryption, firewalls, intrusion detection systems, antivirus software, vulnerability assessments, penetration testing, and security awareness training. Additionally, cybersecurity often involves regulatory compliance with laws and standards designed to protect data privacy and ensure the security of digital infrastructure.
+    </p>
+    <p class="conclusion">
+      Overall, cybersecurity is essential in today's interconnected digital world to mitigate risks, safeguard sensitive information, and maintain trust and confidence in digital technologies and services.
+    </p>
+  </div>
+
+  <div class="blog fly-in-left">
+    <h1>Cyber Sphere's A.I</h1>
+    <p class="conclusion">
+      On our website there is a small button on the right bottom corner of every page which when clicked opens a dialog that is driven by <a href="https://www.chatbase.co/" class="web"> chatbase.co</a> 's A.I  custom chatbot.
+    </p>
+    <p class="conclusion">
+      You can ask this A.I about the Security tips to keep your pc safe from malware or any other type of computer viruses, can be used for threat detection and prevention by analyzing large amounts of data to identify patterns and anomalies that may indicate a cyber attack, Privacy tips and can also be used for many other purposes.
+    </p>
+  </div>
+
+  <!--learning banner-->
+  <div class="corner fly-in-right">
+    <h4><img src="assests/svg/learning logo.svg" alt="" srcset="">Learning corner :-</h4>
+  </div>
+
+  <!--div with info cards-->
+  <div class="cards fly-in-left">
+    <div class="card">
+      <a class="card1" href="privacy-tips.html">
+        <p>Phishing</p>
+        <h6>Phishing is a type of social engineering attack often used to steal user data, including login credentials and credit card numbers.</h6>
+        <div class="go-corner" href="#">
+          <div class="go-arrow">
+            →
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="card">
+      <a class="card1" href="privacy-tips.html">
+        <p>Malware</p>
+        <h6>Malware, or malicious software, is any program or file that is intentionally harmful to a computer, network or server.</h6>
+        <div class="go-corner" href="#">
+          <div class="go-arrow">
+            →
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="card">
+      <a class="card1" href="privacy-tips.html">
+        <p>DLP</p>
+        <h6>Data loss prevention (DLP) is the part of a security strategy that focuses on detecting and preventing the loss, leakage or misuse of company data</h6>
+        <div class="go-corner" href="#">
+          <div class="go-arrow">
+            →
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="card">     
+      <a class="card1" href="privacy-tips.html">
+        <p class="head">Insecure
+        </p>
+        <p class="head">network
+        </p>
+        <div class="info"><h6 class="info">An insecure network is a network that can be accessed without a password or authorization and lacks cybersecurity measures to protect information.</h6></div>
+        <div class="go-corner" href="#">
+          <div class="go-arrow">
+            →
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+    <!--learning banner-->
+    <div class="corner fly-in-right">
+      <h4><img src="assests/svg/useful links logo.svg" alt="" srcset="">Useful Links :-</h4>
+    </div>
+    <!--useful links-->
+  <div class="useful-links fly-in">
+    <a href="https://www.infosecurity-magazine.com/" class="botn fly-in-left">
+      <span>Infosecurity Magazine</span>
+      <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="37" cy="37" r="35.5" stroke="black" stroke-width="3"></circle>
+          <path d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z" fill="black"></path>
+      </svg>
+    </a>
+  <a href="https://krebsonsecurity.com/" class="botn fly-in-right">
+    <span>Krebs on Security</span>
+    <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="37" cy="37" r="35.5" stroke="black" stroke-width="3"></circle>
+        <path d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z" fill="black"></path>
+    </svg>
+  </a>
+  <a href="https://www.securityweek.com/" class="botn fly-in-left">
+    <span>
+      Security Week
+    </span>
+    <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="37" cy="37" r="35.5" stroke="black" stroke-width="3"></circle>
+        <path d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z" fill="black"></path>
+    </svg>
+  </a>
+  <a href="https://thehackernews.com/" class="botn fly-in-right">
+    <span>The Hacker News</span>
+    <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="37" cy="37" r="35.5" stroke="black" stroke-width="3"></circle>
+        <path d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z" fill="black"></path>
+    </svg>
+  </a>
+  <a href="https://securityledger.com/" class="botn fly-in-left">
+    <span>The Security Ledger</span>
+    <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="37" cy="37" r="35.5" stroke="black" stroke-width="3"></circle>
+        <path d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z" fill="black"></path>
+    </svg>
+  </a>
+  <a href="https://threatpost.com/" class="botn fly-in-right">
+    <span>Threatpost</span>
+    <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="37" cy="37" r="35.5" stroke="black" stroke-width="3"></circle>
+        <path d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z" fill="black"></path>
+    </svg>
+  </a>
+  </div>
+
+  <!-- Chatbot script -->
+  <script>
+    window.embeddedChatbotConfig = {
+    chatbotId: "SqmPqz9e0u2OzV1g_RF85",
+    domain: "www.chatbase.co"
+    }
+    </script>
+    <script
+    src="https://www.chatbase.co/embed.min.js"
+    chatbotId="SqmPqz9e0u2OzV1g_RF85"
+    domain="www.chatbase.co"
+    defer>
+    </script>
+  <!-- JavaScript for triggering fly-in animations -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const elementsToAnimate = document.querySelectorAll('.fly-in');
+
+      function checkScroll() {
+        const triggerBottom = window.innerHeight * 0.8;
+        elementsToAnimate.forEach(element => {
+          const elementTop = element.getBoundingClientRect().top;
+          if (elementTop < triggerBottom) {
+            element.classList.add('show');
+          }
+        });
+      }
+
+      window.addEventListener('scroll', checkScroll);
+      checkScroll(); // Trigger check on page load
+    });
+  </script>
+  <!--script for image slider-->
+<script>
+  let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+let i;
+let slides = document.getElementsByClassName("mySlides");
+let dots = document.getElementsByClassName("dot");
+for (i = 0; i < slides.length; i++) {
+  slides[i].style.display = "none";  
+}
+slideIndex++;
+if (slideIndex > slides.length) {slideIndex = 1}    
+for (i = 0; i < dots.length; i++) {
+  dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";  
+dots[slideIndex-1].className += " active";
+setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+    <!--lower content-->
+<div class="blog fly-in-right">
+    <h1>Privacy Tips to keep your data safe
+        </h1>
+<p class="conclusion fly-in-left">
+    To keep your data safe from hackers, here are some essential privacy tips based on the information from the sources provided:
+</p>
+<div class="description fly-in-right">
+<ol>
+    <li>
+        <b>Encrypt Your Data:</b>Set up encryption on your computer to safeguard personal information like data, texts, and emails.
+    </li>
+    <li>
+        <b>Use Secure Wi-Fi:</b> Avoid using public Wi-Fi as it can put your personal data at risk. Always opt for a secure connection that requires a password.
+    </li>
+    <li>
+        <b>Create Strong Passwords:</b> Choose complex passwords with a combination of lower and upper-case letters, numbers, and symbols. Avoid using easily guessable information like birthdays and change passwords periodically. Consider using a password manager tool to keep track of unique passwords.
+    </li>
+    <li>
+        <b>Monitor Activity:</b> Regularly monitor activity across accounts, reports, and tools to detect any unusual behavior that could indicate a cyberattack. Utilize tools designed for monitoring user, device, and network activity.
+    </li>
+    <li>
+        <b>Backup Your Data:</b> Backup your data regularly to prevent loss in case of device theft or loss. Cloud storage solutions are convenient options for backing up data securely.
+    </li>
+    <li>
+        <b>Update Devices:</b>Always keep your devices up to date by installing the latest updates provided by operating systems like Microsoft and Apple. These updates often include security patches to protect against vulnerabilities.
+    </li>
+    <li>
+        <b>Be Cautious with File Sharing:</b> Be selective about who has permission to view, comment, or edit your shared documents to avoid exposing sensitive information to unauthorized individuals.
+    </li>
+    <li>
+       <b>Install Security Software:  </b>Use antivirus software, anti-spyware software, and firewalls on all your devices for added protection against cyber threats. Consider cyber insurance for additional coverage in case of a cyberattack.
+    </li>
+</ol>
+<p class="conclusion">
+    By following these privacy tips diligently, you can significantly enhance the security of your personal data and reduce the risk of falling victim to hackers or cybercriminals.
+</p>
+</div>
+</div>
+            <!--learning banner-->
+            <div class="corner fly-in-left">
+                <h4><img src="assests/svg/learning logo.svg" alt="" srcset="">Learning corner :-</h4>
+                </div>
+                        <!--upper content-->
+                      <div class="content fly-in">
+                        <h1>What are Cyber Crimes?</h1>
+                        <h2>Cybercrimes are offences that may be committed against individuals, companies or  institutions by using
+                            computers, internet or mobile technology. Cybercriminals use platforms such as social networking sites, emails, chatrooms, pirated software, websites, etc., to attack victims. Children are also vulnerable to various types of cybercrimes.
+                            </h2>
+                    </div>   
+                    <!--lower content-->
+                <div class="blog fly-in-right">
+                    <h1>Cyber Threats that can Harm anyone
+                        </h1>
+             <p class="conclusion">
+                 To address these challenges, cybersecurity professionals employ a variety of techniques and tools, including encryption, firewalls, intrusion detection systems, antivirus software, vulnerability assessments, penetration testing, and security awareness training. Additionally, cybersecurity often involves regulatory compliance with laws and standards designed to protect data privacy and ensure the security of digital infrastructure.
+             </p>
+             <p class="conclusion">
+                 Overall, cybersecurity is essential in today's interconnected digital world to mitigate risks, safeguard sensitive information, and maintain trust and confidence in digital technologies and services.
+             </p>
+             <p class="conclusion">
+                Cyber threats are different possible ways that can be used to attack us using internet or mobile technology.
+            </p>
+            <p class="conclusion">
+                Cyber criminals want to get unauthorized access to our sensitive information. In majority of cases, the cyber criminals would advent an attack with a clear cut objective, for that they use some of the most effective methods.
+            </p>
+            <div class="description fly-in-left">
+                <ol>
+                    <li>
+                        <b>Email Spoofing:</b> Sending out e-mails to you that look like genuine and from a trusted e-mail ID but actually, they're not.
+                    </li>
+                    <li>
+                        <b>Malicious Files Applications:</b> Sending you malicious and bad applications and files through direct messaging, gaming, emails or websites etc. in order to get access to your smart phone and personal data.
+                    </li>
+                    <li>
+                        <b> Social Engineering:</b> Social Engineering is a technique used by cybercriminals to gain your confidence to get information from you. Depending on what you like to do most, a cybercriminal may try	to interact with you to mine for information and/or commit some harm to you. Suppose you like to play an online game, an impersonator behaves like another child and invites you to talk to him and share information.
+                    </li>
+                    <li>
+                        <b>Cyber Bullying:</b> A form of harassment or bullying inflicted through the use of electronic or communication devices such as computer, mobile phone, laptop, etc.
+                    </li>
+                    <li>
+                        <b>Identity Theft:</b> Deliberate use of someone's identity to gain financial advantage or to obtain credit and other benefits in the other person's name/ for counterparts disadvantage or loss.
+                    </li>
+                    <li>
+                        <b>Job Frauds:</b> Fraudulent representation or a deceptive activity on the part of an employee or a prospective employee toward an employer.
+                    </li>
+                    <li>
+                       <b> Banking Frauds: </b>Fraudulently obtaining money from depositors by posing as a bank or other financial institution.
+                    </li>
+                </ol>
+            </div>
+             </div>
+                         <!--bullying content-->
+                         <div class="bullying fly-in-right">
+                            <h1>What is Cyber Bullying?</h1>
+                            <h2>Cyberbullying refers to the act of using digital communication platforms, such as social media, to harass, intimidate, or harm others. It involves the use of technology to send or post hurtful messages, spread rumors, share inappropriate content, or engage in any form of online harassment. Cyberbullying can have serious emotional and psychological effects on the victims. It is important to report and address cyberbullying incidents promptly.
+                                </h2>
+                                <h2>The consequences of cyber bullying on children can be physical, emotional and psychological consequences that can not only impact the academic performance of students but affect their daily life to a great extent.</h2>
+                       <h1> How you can protect yourself from becoming a victim of Cyber Bullying?
+                    </h1>
+                    <div class="description fly-in-left">
+                        <ol>
+                            <li>
+                                Don't accept friend requests from unknown people on social media platforms. Cyber bully can even create a fake account to befriend victims. As a rule of the thumb, only add people online whom you know offline.
+            
+                            </li>
+                            <li>
+                                Don't share your personal information like date of birth, address, and phone number on social media or other online platforms. You can go to privacy settings on social media platforms to select who can access your posts online. Try to restrict access of your profile to your friends only. Picture stories for example on a particular platform are public by default.
+                            </li>
+                            <li>
+                                Remember what you post online remains there so  it is important to be careful and not to share your phone number and other personal details in comments or posts on social media platforms.
+            
+                            </li>
+                            <li>
+                                Never install unwanted Software and Apps like dating App, online games, etc. from unknown sources. You should be very careful while chatting in the chat rooms. Never share personal details in the chat room and limit your identity.
+            
+                            </li>
+                            <li>
+                                If you feel hurt after reading a post from a friend or a stranger, don't react with aggressive reply. It may encourage the bully to keep posting such messages. If hurtful post/message is from your friend, you can request him not to do it again. If you are repeatedly getting such messages/ post, please inform your parents or elders immediately so that they can support you.
+                            </li>
+                            <li>
+                                Also, please remember that as a good citizen you should never share mean comments or hurtful messages or embarrassing pictures/videos online. Please be careful and check if your post/comment /videos can be embarrassing for your friend or anyone else. If so, please don't post. You should not become a cyber bully yourself as it is a punishable offence. It adversely impacts the victim.
+                            </li>
+                        </ol>
+                    </div>
+                            </div>  
+                            
+                         <div class="blog fly-in-right">
+                            <h1>
+                                Types of Cybersecurity 
+                                </h1>
+                     <p class="conclusion">
+                        The types of cybersecurity encompass various aspects of protecting organizations against cyber threats by securing different elements of their digital infrastructure. 
+                     </p>
+
+                    <div class="description fly-in-left">
+                        <ol>
+                            <li>
+                                <b>Network Security: </b> Network security focuses on securing computer networks from unauthorized access, data breaches, and other network-based threats. It involves technologies like firewalls, intrusion detection systems, virtual private networks, and network segmentation.
+                            </li>
+                            <li>
+                                <b>Application Security:</b> Application security involves securing software applications from cyber-attacks by testing code, identifying vulnerabilities, and ensuring that applications are free from security flaws. It includes practices like code review, secure coding, and regular security testing.
+                            </li>
+                            <li>
+                                <b>Information Security:</b> Information security protects digital information stored in databases, files, or other repositories by ensuring confidentiality, integrity, and availability. It involves access control mechanisms, encryption of data, backups, disaster recovery plans, and monitoring system activity
+                            </li>
+                            <li>
+                                <b>Cloud Security: </b>Cloud security focuses on protecting data and systems hosted on cloud platforms like AWS, Azure, and Google Cloud. It includes technical and administrative controls to secure data stored in the cloud and the cloud infrastructure itself through secure configurations, access management controls, encryption, and regular audits.
+                            </li>
+                            <li>
+                                <b>Endpoint Security: </b> Endpoint security secures end-user devices such as desktops and laptops with data and network security controls to prevent threats like phishing and ransomware. It includes technologies for advanced threat prevention and endpoint detection and response solutions.
+                            </li>
+                            <li>
+                                <b>Mobile Security:</b> Mobile security protects tablets and smartphones that have access to corporate data from malicious apps, phishing attacks, and other threats. It secures operating systems and devices from rooting or jailbreaking to prevent unauthorized access.
+                            </li>
+                            <li>
+                                <b>Data Security:</b> Data security involves protecting sensitive information from unauthorized access, disclosure, alteration, or destruction. It includes encryption, access controls, data masking, and data loss prevention (DLP) techniques to ensure the confidentiality, integrity, and availability of data stored or transmitted by an organization.
+                            </li>
+                            <li>
+                                <b>Identity and Access Management (IAM):</b>IAM involves managing user identities and controlling access to resources based on users' roles, permissions, and authentication credentials. It includes techniques such as multi-factor authentication (MFA), single sign-on (SSO), and privileged access management (PAM) to prevent unauthorized access and identity theft.
+                            </li>
+                        </ol>
+                    </div>
+                    <p class="conclusion fly-in-right">
+                        By implementing these types of cybersecurity measures, organizations can better protect their digital assets, information systems, and sensitive data from a wide range of cyber threats and attacks.  
+                    </p>
+                     </div>
+                     <div class="blog fly-in-right">
+                        <h1>
+                          What you can do if you are a victim of Cyberbullying?
+                            </h1>
+                 <p class="conclusion">
+                    <ol>
+                        <li>
+                            <b>Inform your parents/elders immediately:</b> If someone is bullying you, you must inform your parents/elders immediately. Don't feel that your parents will restrict your online activity or ask you not to use your computer/smartphone. It is important to inform them so that they can support and guide you. Narrate the entire issue clearly to your parents/elders.
+                        </li>
+                        <li>
+                            <b>Identify the bully:</b> Try to identify if the bully is a known person or a stranger. You should try to find out the reason why bully is bothering you. A bully can be your friend or a known person. You may seek help of your parents/teachers to reach out to the bully and ask him/her to stop bullying you.
+                        </li>
+                        <li>
+                            <b>Block the Bully:</b> If bully is using social media platforms to bully you, you can block him/her. All the social media apps or services have the option to block a user.
+                        </li>
+                        <li>
+                            <b>Collect and Save posts/messages:</b> Save posts/messages that were used against you. Such messages/posts can be used as an evidence, if in case a legal action has to be taken.
+                        </li>
+                        <li>
+                            <b>Never respond to a bully aggressively:</b> Bully wants you to get aggressive and get into heated argument. This adds mileage to the information unwantedly. So the best way is to ask the person politely to stop it and if he/she becomes annoying, stop the chat/block him/her.
+                        </li>
+                        <li>
+                            <b>Contact the police:</b> If your parents/elders feel the need, they can contact the local police station to register a complaint against the bully.
+                        </li>
+                    </ol>
+                 </p>
+                     </div>
+                     
+  <!--learn more link-->
+  <div class="learn fly-in-left"><a href="download.html" class="learner">Know More → </a></div>
+ 
+  <!-- Chatbot script -->
+  <script>
+    window.embeddedChatbotConfig = {
+    chatbotId: "SqmPqz9e0u2OzV1g_RF85",
+    domain: "www.chatbase.co"
+    }
+    </script>
+    <script
+    src="https://www.chatbase.co/embed.min.js"
+    chatbotId="SqmPqz9e0u2OzV1g_RF85"
+    domain="www.chatbase.co"
+    defer>
+    </script>
+  <!-- JavaScript for triggering fly-in animations -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const elementsToAnimate = document.querySelectorAll('.fly-in-right');
+  
+      function checkScroll() {
+        const triggerBottom = window.innerHeight * 0.8;
+        elementsToAnimate.forEach(element => {
+          const elementTop = element.getBoundingClientRect().top;
+          if (elementTop < triggerBottom) {
+            element.classList.add('show');
+          }
+        });
+      }
+  
+      window.addEventListener('scroll', checkScroll);
+      checkScroll(); // Trigger check on page load
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const elementsToAnimate = document.querySelectorAll('.fly-in-left');
+  
+      function checkScroll() {
+        const triggerBottom = window.innerHeight * 0.8;
+        elementsToAnimate.forEach(element => {
+          const elementTop = element.getBoundingClientRect().top;
+          if (elementTop < triggerBottom) {
+            element.classList.add('show');
+          }
+        });
+      }
+  
+      window.addEventListener('scroll', checkScroll);
+      checkScroll(); // Trigger check on page load
+    });
+  </script>
+            <!--footer-->
+            <div class="footer fly-in-right">
+                <div class="links">
+                  To contact us click on this <a href="contact.html"><img src="svg/contact logo.svg"></a> icon on the top.
+                  </div>
+                  <div class="links">
+                      Copyright &copy;<script>document.write(new Date().getFullYear());</script> Spider Development
+                  </div>
+              </div>
+    </div>
+</body>
+</html>

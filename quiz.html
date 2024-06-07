@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/custom-scrollbar.css">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body{
+            background: linear-gradient(272deg, #000428, #004e92);
+        }
+
+        header {
+            color: #eee;
+            font-family: Poppins;
+            font-size: 12px;
+            width: 100%;
+            max-width: auto;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            top: 1em;
+            z-index: 10000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background: rgb(51,48,160);
+            background: linear-gradient(90deg, rgba(51,48,160,1) 0%, rgba(34,82,132,1) 50%, rgba(6,1,75,1) 100%);
+            margin: 30px;
+            height: 80px;
+            border-radius: 50px;
+        }
+
+        .menus {
+            box-sizing: border-box;
+            width: 45px;
+            height: 45px;
+            border-radius: 100%;
+            border: none;
+            background: rgb(191,219,242);
+            background: linear-gradient(0deg, rgba(191,219,242,1) 0%, rgba(17,59,153,1) 100%);
+            border: 2px #83a6cc;
+            margin-left: 12px;
+        }
+
+        .end {
+            margin-right: 12px;
+            box-sizing: border-box;
+            width: 45px;
+            height: 45px;
+            border-radius: 100%;
+            border: none;
+            background: rgb(191,219,242);
+            background: linear-gradient(0deg, rgba(191,219,242,1) 0%, rgba(17,59,153,1) 100%);
+            border: 2px #83a6cc;
+            margin-left: 12px;
+        }
+
+        .intro-container {
+            text-align: center;
+            color: white;
+            animation: fadeIn 2s ease-in-out;
+            margin-top: 150px;
+        }
+
+        .logo-container {
+            animation: bounce 2s infinite;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            font-size: 4rem;
+            font-weight: bold;
+            animation: neon 1.5s ease-in-out infinite alternate;
+            color: #193066;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            animation: slideIn 3s ease-in-out;
+        }
+
+        .start-button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            background: #fff6fa;
+            color: rgb(75, 81, 124);
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(255, 0, 102, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .start-button:hover {
+            background: #060f4a;
+            box-shadow: 0 0 25px rgba(102, 0, 255, 0.7);
+            color: #fff;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes neon {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #d1d1d1, 0 0 40px #4b5676, 0 0 50px #ffffff, 0 0 60px #193066, 0 0 70px #c3c3c3;
+            }
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #ffffff, 0 0 40px #1e35bb, 0 0 50px #c5c5c5, 0 0 60px #c1c1c1, 0 0 70px #ffffff, 0 0 80px #534994;
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-30px); }
+            60% { transform: translateY(-15px); }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        .button {
+  --font-color: #323232;
+  --bg-color: #fff;
+  --main-color: #323232;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--font-color);
+  cursor: pointer;
+  padding: 10px;
+}
+
+.button:active {
+  box-shadow: 0px 0px var(--main-color);
+  transform: translate(3px, 3px);
+}
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <header>
+            <nav>
+                <a href="index.html"> <button class="menus">
+                    <img src="svg/home logo.svg" alt="home" class="buttoo">
+                              </button></a>
+                        <a href="privacy-tips.html"> <button class=" menus">
+                                <img src="svg/tips logo.svg" alt="#" class="buttoo">
+                              </button></a>
+                              <a href="contact.html">  <button class=" menus">
+                                <img src="svg/contact logo.svg" alt="#" class="buttoo">
+                              </button></a>
+                              <a href="download.html">  <button class=" menus">
+                                <img src="svg/download logo.svg" alt="#" class="buttoo">
+                              </button></a>
+                              <a href="quiz.html">  <button class="end">
+                                <img src="svg/quiz.svg" alt="#" class="buttoo">
+                              </button></a>
+            </nav>
+        </header>
+      </div>
+    <div class="intro-container">
+        <div class="logo-container">
+            <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                <!-- Simple shield icon -->
+                <path fill="#060f4a" d="M32 2L12 8v18c0 13 10 26 20 34 10-8 20-21 20-34V8L32 2z"/>
+                <path fill="#6600ff" d="M32 4l18 5v17c0 11-9 23-18 30-9-7-18-19-18-30V9l18-5z"/>
+                <!-- Replace the text with an image -->
+                <image href="svg/quiz.svg" x="18" y="14" height="28px" width="28px"/>
+            </svg>
+        </div>
+        <div class="title">CYBER-SPHERE <br>QUIZ</div>
+        <div class="subtitle">Test your knowledge</div>
+        <button class="button" onclick="location.href='menu.html'">
+            Let`s go →
+          </button>
+    </div>
+</body>
+</html>

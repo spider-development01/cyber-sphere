@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Selector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-family: "Poppins",sans-serif;
+    background: rgb(27,48,82);
+    background: radial-gradient(circle, rgba(27,48,82,1) 0%, rgba(4,23,56,1) 30%, rgba(0,11,30,1) 56%, rgba(5,33,78,1) 100%);;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+a{
+    text-decoration: none;
+}
+
+        .container {
+            background: rgb(51,48,160);
+    background: linear-gradient(90deg, rgba(51,48,160,1) 0%, rgba(34,82,132,1) 50%, rgba(6,1,75,1) 100%);
+            text-align: center;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin: 20px;
+        }
+
+        h1 {
+            margin-bottom: 2rem;
+        }
+
+        .quiz-option {
+    --font-color: #323232;
+    --bg-color: #fff;
+    --main-color: #13143c;
+    border-radius: 15px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--font-color);
+    cursor: pointer;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  
+  .quiz-option:active {
+    box-shadow: 0px 0px var(--main-color);
+    transform: translate(3px, 3px);
+  }
+
+  h1{
+    color: #fff;
+  }
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cyber Security Quiz Selector</h1>
+        <a href="/quiz/cybergromming/grooming-5.html"><div class="quiz-option">5 Questions test</div></a>
+        <a href="/quiz/cybergromming/gromming-10.html"><div class="quiz-option">10 Questions test</div></a>
+        <a href="/quiz/cybergromming/gromming-20.html"><div class="quiz-option">20 Questions test</div></a>
+    </div>
+</body>
+</html>
