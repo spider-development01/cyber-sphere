@@ -10,45 +10,105 @@
     <link rel="stylesheet" href="css/card.css">
     <link rel="stylesheet" href="css/custom-scrollbar.css">
     <style>
-        body{
+        body {
+            overflow: hidden; /* Prevent scrolling while loader is active */
+        }
+
+        /* Fullscreen loader */
+        #loader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(27,48,82);;
+            z-index: 9999; /* Keep loader on top of content */
+        }
+
+        .logo-container {
+            width: 150px;
+            height: 150px;
+        }
+
+        #logo {
+            width: 100%;
+            opacity: 0; /* Initially hidden */
+        }
+
+        /* Keyframe animation */
+        @keyframes logoAnimation {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.5) rotate(360deg);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Animation class */
+        .animate-logo {
+            animation: logoAnimation 3s ease-in-out forwards;
+        }
+
+        /* Main content, hidden initially */
+        #content {
+            display: none;
             overflow: hidden;
         }
     </style>
-    
 </head>
 <body>
-  <div class="nav">
-    <header>
-        <nav>
-            <a href="index.html"> <button class="menus">
-                <img src="svg/home logo.svg" alt="home" class="buttoo">
-                          </button></a>
-                    <a href="privacy-tips.html"> <button class=" menus">
-                            <img src="svg/tips logo.svg" alt="#" class="buttoo">
-                          </button></a>
-                          <a href="contact.html">  <button class=" menus">
-                            <img src="svg/contact logo.svg" alt="#" class="buttoo">
-                          </button></a>
-                          <a href="download.html">  <button class=" menus">
-                            <img src="svg/download logo.svg" alt="#" class="buttoo">
-                          </button></a>
-                          <a href="quiz.html">  <button class="end">
-                            <img src="svg/quiz.svg" alt="#" class="buttoo">
-                          </button></a>
-        </nav>
-    </header>
+
+  <!-- Loader Animation -->
+  <div id="loader-container">
+    <div class="logo-container">
+      <img id="logo" src="images\animate.svg" alt="Logo">
+    </div>
   </div>
-    <!-- carousel -->
+
+  <!-- Main page content -->
+  <div id="content">
+    <div class="nav">
+      <header>
+          <nav>
+              <a href="index.html"> <button class="menus">
+                  <img src="svg/home logo.svg" alt="home" class="buttoo">
+              </button></a>
+              <a href="privacy-tips.html"> <button class="menus">
+                  <img src="svg/tips logo.svg" alt="#" class="buttoo">
+              </button></a>
+              <a href="contact.html"> <button class="menus">
+                  <img src="svg/contact logo.svg" alt="#" class="buttoo">
+              </button></a>
+              <a href="download.html"> <button class="menus">
+                  <img src="svg/download logo.svg" alt="#" class="buttoo">
+              </button></a>
+              <a href="quiz.html"> <button class="end">
+                  <img src="svg/quiz.svg" alt="#" class="buttoo">
+              </button></a>
+          </nav>
+      </header>
+    </div>
+
+    <!-- Carousel -->
     <div class="carousel">
-        <!-- list item -->
         <div class="list">
             <div class="item">
                 <img src="images/hack1.jpg">
                 <div class="content">
                     <div class="author">Welcome To</div>
                     <div class="title">CYBER-SPHERE</div>
-                    <div class="des">                     
-Cyber Sphere is an AI-powered platform offering comprehensive information on cybersecurity. It helps users protect themselves from hackers and stay safe online by providing up-to-date security tips, threat alerts, and best practices for digital safety.
+                    <div class="des">
+                        Cyber Sphere is an AI-powered platform offering comprehensive information on cybersecurity.
                     </div>
                     <div class="buttons">
                         <button>LEARN MORE</button>
@@ -61,8 +121,8 @@ Cyber Sphere is an AI-powered platform offering comprehensive information on cyb
                 <div class="content">
                     <div class="author">Welcome To</div>
                     <div class="title">CYBER-SPHERE</div>
-                    <div class="des">          
-Cyber Sphere is an AI-powered platform offering comprehensive information on cybersecurity. It helps users protect themselves from hackers and stay safe online by providing up-to-date security tips, threat alerts, and best practices for digital safety.
+                    <div class="des">
+                        Cyber Sphere is an AI-powered platform offering comprehensive information on cybersecurity.
                     </div>
                     <div class="buttons">
                         <button>LEARN MORE</button>
@@ -76,21 +136,20 @@ Cyber Sphere is an AI-powered platform offering comprehensive information on cyb
                     <div class="author">Welcome To</div>
                     <div class="title">CYBER-SPHERE</div>
                     <div class="des">
-Cyber Sphere is an AI-powered platform offering comprehensive information on cybersecurity. It helps users protect themselves from hackers and stay safe online by providing up-to-date security tips, threat alerts, and best practices for digital safety.
+                        Cyber Sphere is an AI-powered platform offering comprehensive information on cybersecurity.
                     </div>
                     <div class="buttons">
-                        <button onclick="location.href='https://gmail.com';">LEARN MORE</button>
+                        <button>LEARN MORE</button>
                         <button>CONTACT US</button>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- list thumnail -->
+
+        <!-- Carousel thumbnails -->
         <div class="thumbnail">
             <div class="item">
                 <img src="images/hack1.jpg">
-                <div class="content">
-                </div>
             </div>
             <div class="item">
                 <img src="images/hack3.png">
@@ -99,32 +158,49 @@ Cyber Sphere is an AI-powered platform offering comprehensive information on cyb
                 <img src="images/hack2.png">
             </div>
         </div>
-        <!-- next prev -->
 
+        <!-- Navigation arrows -->
         <div class="arrows">
             <button id="prev"><</button>
             <button id="next">></button>
         </div>
-        <!-- time running -->
-        <div class="time"></div>
     </div>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5495032059831460"
-     crossorigin="anonymous"></script>
-      <!-- Chatbot script -->
+  </div>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5495032059831460" crossorigin="anonymous"></script>
+
+  <!-- Chatbot script -->
   <script>
     window.embeddedChatbotConfig = {
-    chatbotId: "SqmPqz9e0u2OzV1g_RF85",
-    domain: "www.chatbase.co"
+      chatbotId: "SqmPqz9e0u2OzV1g_RF85",
+      domain: "www.chatbase.co"
     }
-    </script>
-    <script
-    src="https://www.chatbase.co/embed.min.js"
-    chatbotId="SqmPqz9e0u2OzV1g_RF85"
-    domain="www.chatbase.co"
-    defer>
-    </script>
+  </script>
+  <script src="https://www.chatbase.co/embed.min.js" chatbotId="SqmPqz9e0u2OzV1g_RF85" domain="www.chatbase.co" defer></script>
 
-    <script src="app.js"></script>
+  <!-- Loader logic -->
+  <script>
+    // Wait until the DOM is fully loaded
+    document.addEventListener("DOMContentLoaded", function () {
+      const logo = document.getElementById("logo");
+      const loaderContainer = document.getElementById("loader-container");
+      const content = document.getElementById("content");
+
+      // Start the logo animation after a short delay
+      setTimeout(() => {
+        logo.classList.add('animate-logo');
+      }, 1000);  // Adjust delay here (1000 = 1 second)
+
+      // Hide loader and show content after animation ends (4 seconds in this case)
+      setTimeout(() => {
+        loaderContainer.style.display = 'none';  // Hide loader
+        content.style.display = 'block';  // Show the main content
+        document.body.style.overflow = 'auto';  // Enable scrolling
+      }, 4000);  // Duration matches the animation length (3 seconds + 1 second delay)
+    });
+  </script>
+
+  <script src="app.js"></script>
 
 </body>
 </html>
