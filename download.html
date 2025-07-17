@@ -161,13 +161,18 @@
     </div>
 
     <!-- Chatbot script -->
+  <script>
+      const crypto = require('crypto');
+
+const secret = '9n2r031o4jum7exdcg7y0febnzs4d4cj'; // Your verification secret key
+const userId = current_user.id // A string UUID to identify your user
+
+const hash = crypto.createHmac('sha256', secret).update(userId).digest('hex');
+  </script>
+
     <script>
-        window.embeddedChatbotConfig = {
-            chatbotId: "SqmPqz9e0u2OzV1g_RF85",
-            domain: "www.chatbase.co"
-        }
-    </script>
-    <script src="https://www.chatbase.co/embed.min.js" chatbotId="SqmPqz9e0u2OzV1g_RF85" domain="www.chatbase.co" defer></script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="9BoaQSy_bJF6obgUjlGDU";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
 
     <!-- JavaScript for triggering fly-in animations -->
     <script>
