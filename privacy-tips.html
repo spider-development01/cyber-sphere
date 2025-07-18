@@ -619,13 +619,27 @@ setTimeout(showSlides, 2000); // Change image every 2 seconds
   </script>
 
   <!-- Chatbot script -->
+
 <script>
-      const crypto = require('crypto');
+window.chatbaseUserConfig = {
+    user_id: <USER_ID>,
+    user_hash: <USER_HASH>, // this is the hash of the user_id, should be generated on the server
+      user_metadata: {
+        "name": "John Doe",
+        "email": "john@example.com",
+        "company": "Acme Inc",
+        // Add any other relevant user information
+      }
+}
+</script>
+    
+  <script>
+const crypto = require("crypto");
 
-const secret = '9n2r031o4jum7exdcg7y0febnzs4d4cj'; // Your verification secret key
-const userId = current_user.id // A string UUID to identify your user
+const secret = "9n2r031o4jum7exdcg7y0febnzs4d4cj"; // Your verification secret key
+const userId = current_user.id; // A string UUID to identify your user
 
-const hash = crypto.createHmac('sha256', secret).update(userId).digest('hex');
+const hash = crypto.createHmac("sha256", secret).update(userId).digest("hex");
   </script>
 
 <script>
